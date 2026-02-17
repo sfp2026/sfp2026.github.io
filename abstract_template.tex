@@ -1,0 +1,78 @@
+\documentclass[a4paper,12pt,notitlepage]{article}
+\usepackage[english]{babel}
+\usepackage{anysize}
+\marginsize{2.5cm}{2.5cm}{1.5cm}{2.5cm}
+\usepackage[affil-it]{authblk}
+\pagestyle{empty}
+\usepackage{color}
+\usepackage{epsfig}
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage{graphicx}
+\makeatletter
+\renewcommand*\footnoterule{}
+\renewcommand*\footnotemark{}
+\renewcommand\thanks[1]{\renewcommand*\footnotemark{}%
+\let\thefootnote\relax{\protect\footnotetext[\the\c@footnote]{\small#1}}}%
+%
+\renewcommand{\maketitle}{
+    \begin{center}
+         \vspace*{-20mm}
+         {\sf\vbox{\hbox{\hspace{0.5cm}\Large\textcolor[rgb]{0,0.37,0.24}{$12^{\sf th}$ International Workshop on 'Stochasticity in Fusion Plasmas}}%
+         \hbox{\hspace{4.5cm}\normalsize\textcolor[rgb]{0,0.37,0.24}{2-4 June 2026, Higashi-Hiroshima, Japan}}}} 
+         \vspace*{5mm}
+ {\Large\bfseries\noindent\ignorespaces\@title\par}
+ {\large\noindent\ignorespaces\@author\par}
+ {\normalsize\noindent\ignorespaces\@thanks\par}
+ \end{center}
+}
+%
+\begin{document}
+% end of preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Your title here}
+\author[1]{ author1 }
+\author[1]{ author2 }
+\author[2]{ author3 }
+\author[2]{ author4 }
+\affil[1]{{\normalsize affiliation1 }}
+\affil[2]{{\normalsize affiliation2 }}
+\thanks{Corresponding author: author name xxx@yyyy}
+%
+\maketitle
+%%%%%%
+This text is a blind text.
+This text is a blind text.
+This text is a blind text.
+This text is a blind text.
+This text is a blind text.
+This text is a blind text.
+%%%%%%
+%\begin{center}
+%    \includegraphics[width=11cm] {./your_plot.pdf}\\
+\\
+% figure caption
+{\normalsize\itshape
+Highlighting figure may be inserted (should be clearly visible, non-color).
+}
+%\end{center}
+
+\vfill
+
+{\footnotesize 
+\renewcommand{\refname}{\small\bfseries References}
+\begin{thebibliography}{99}
+\bibitem{bbbb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A.~BBBB, \textit{et al.}, 1997 \textit{Phys. Rev. Lett.} \textbf{XX} ppp % insert first cite
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibitem{cccc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+C.~DDDD, \textit{et al.}, 2010 \textit{IAEA coference} EX-C/Px-yy % insert next cite
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{thebibliography}
+}
+
+
+\end{document}
